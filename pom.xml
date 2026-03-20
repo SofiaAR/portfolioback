@@ -29,6 +29,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--swagger-->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+        
+
         <!-- JPA (incluye Hibernate como implementación por defecto) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
