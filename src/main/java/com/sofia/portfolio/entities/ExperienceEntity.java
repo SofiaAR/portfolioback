@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import jakarta.persistence.*;
 
 @Entity
-public class Experience {
+public class ExperienceEntity {
 
 
     @Id
@@ -14,10 +14,10 @@ public class Experience {
     private LocalDate endWork;
     @ManyToOne( fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "company_id")
-    private Company company;
+    private CompanyEntity company;
     @ManyToOne( fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "person_id")
-    private Person person;
+    private PersonEntity person;
 
     public Long getId() {
         return id;
@@ -37,16 +37,16 @@ public class Experience {
     public void setEndWork(LocalDate endWork) {
         this.endWork = endWork;
     }
-    public Company getCompany() {
+    public CompanyEntity getCompany() {
         return company;
     }
-    public void setCompany(Company company) {
+    public void setCompany(CompanyEntity company) {
         this.company = company;
     }
-    public Person getPerson() {
+    public PersonEntity getPerson() {
         return person;
     }
-    public void setPerson(Person person) {
+    public void setPerson(PersonEntity person) {
         this.person = person;
     }
 

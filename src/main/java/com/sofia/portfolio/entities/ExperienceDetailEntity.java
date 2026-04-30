@@ -4,7 +4,7 @@ package com.sofia.portfolio.entities;
 import jakarta.persistence.*;
 
 @Entity
-public class ExperienceDetail {
+public class ExperienceDetailEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,7 +13,7 @@ public class ExperienceDetail {
     private String detail;
     @ManyToOne( fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "experience_id")
-    private Experience experience;
+    private ExperienceEntity experience;
 
     public Long getId() {
         return id;
@@ -33,10 +33,10 @@ public class ExperienceDetail {
     public void setDetail(String detail) {
         this.detail = detail;
     }
-    public Experience getExperience() {
+    public ExperienceEntity getExperience() {
         return experience;
     }
-    public void setExperience(Experience experience) {
+    public void setExperience(ExperienceEntity experience) {
         this.experience = experience;
     }
     

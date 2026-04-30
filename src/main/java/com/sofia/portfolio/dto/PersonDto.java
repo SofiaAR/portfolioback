@@ -1,11 +1,7 @@
-package com.sofia.portfolio.entities;
-import jakarta.persistence.*;
+package com.sofia.portfolio.dto;
 
-@Entity
-public class Person {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class PersonDto {
+    
     private Long id;
     private String name; 
     private String lastName;
@@ -40,16 +36,15 @@ public class Person {
     public String getCarreer() {
         return carreer;
     }
-    public void setCarreer(String carreer) {
-        this.carreer = carreer;
+    public void setCareer(String career) {
+        this.carreer = career;
     }
     public String getPhoneNumber() {
         return phoneNumber;
     }
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    } 
+    }
 
-    
     
 }
